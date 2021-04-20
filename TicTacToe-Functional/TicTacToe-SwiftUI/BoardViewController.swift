@@ -79,10 +79,6 @@ final class BoardViewController: UIViewController {
       vStack.widthAnchor.constraint(equalTo: vStack.heightAnchor),
       topSpacer.heightAnchor.constraint(equalTo: bottomSpacer.heightAnchor)
     ])
-    view.publisher(for: \.traitCollection).sink(receiveValue: { trait in
-      print("trait \(trait)")
-    })
-    .store(in: &subscriptions)
     traitCollectionDidChangePublisher
       .compactMap { [view] _ in view?.bounds.size }
       .sink(receiveValue: { size in
