@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0303F71124BBA04700EE6E29 /* Emoji Publisher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Emoji Publisher.entitlements"; sourceTree = "<group>"; };
 		034F9639249C7F9700AD04D5 /* Emoji Publisher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Emoji Publisher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		034F963C249C7F9700AD04D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		034F963E249C7F9700AD04D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		034F963B249C7F9700AD04D5 /* Emoji Publisher */ = {
 			isa = PBXGroup;
 			children = (
+				0303F71124BBA04700EE6E29 /* Emoji Publisher.entitlements */,
 				034F963C249C7F9700AD04D5 /* AppDelegate.swift */,
 				034F963E249C7F9700AD04D5 /* SceneDelegate.swift */,
 				034F9640249C7F9700AD04D5 /* ContentView.swift */,
@@ -284,6 +286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Emoji Publisher/Emoji Publisher.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Emoji Publisher/Preview Content\"";
 				DEVELOPMENT_TEAM = L4WMJSL77G;
@@ -295,6 +298,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "josh.Emoji-Publisher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,6 +308,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Emoji Publisher/Emoji Publisher.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Emoji Publisher/Preview Content\"";
 				DEVELOPMENT_TEAM = L4WMJSL77G;
@@ -315,6 +320,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "josh.Emoji-Publisher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -3,6 +3,7 @@ import Combine
 
 
 // Publisher
+// Generic with respect to Output and Failure
 // Emits 0 to ♾️ Outputs followed by exactly 0 or 1 completion or Failure
 // Subscriptions (sink and assign) return a Cancellable that you must retain to keep the Publisher alive
 
@@ -37,10 +38,10 @@ let cancellable = Timer
   .autoconnect()
   .map { _ in 1 }
   .scan (0, +)
+  .map { $0 % emojis.count }
   .prepend(0)
   .map { index in
-    let wrappedIndex = index % emojis.count
-    return String(emojis[emojis.index(emojis.startIndex, offsetBy: wrappedIndex)])
+    String(emojis[emojis.index(emojis.startIndex, offsetBy: index)])
   }
   .sink { output in
     print(output)

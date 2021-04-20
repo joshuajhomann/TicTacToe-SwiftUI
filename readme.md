@@ -1,8 +1,10 @@
 # Sample projects for Flock of Swifts meetup on 20-June-2020.
 
+## Updated 19-April-2020 for Swift Miami Meetup with an equivalent UIViewController implementation
+
 ## Emoji Publisher Playground
 
-We started here with a brief review of `Publisher` and how to create a `Publisher` beforelooking at how you can use various operators including `map`, `scan`, and `prepend` to model a stateful system functionally.
+We started here with a brief review of `Publisher` and how to create a `Publisher` before looking at how you can use various operators including `map`, `scan`, and `prepend` to model a stateful system functionally.
 
 ## Emoji Publisher
 

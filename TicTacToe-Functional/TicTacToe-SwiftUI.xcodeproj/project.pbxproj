@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03416875262E113E00CB060B /* TicTacToeGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03416874262E113E00CB060B /* TicTacToeGameViewModel.swift */; };
+		03416878262E117A00CB060B /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03416877262E117A00CB060B /* BoardViewController.swift */; };
 		0399196C242FF9720085BF2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399196B242FF9720085BF2F /* AppDelegate.swift */; };
 		0399196E242FF9720085BF2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399196D242FF9720085BF2F /* SceneDelegate.swift */; };
 		03991970242FF9720085BF2F /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399196F242FF9720085BF2F /* BoardView.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03416874262E113E00CB060B /* TicTacToeGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeGameViewModel.swift; sourceTree = "<group>"; };
+		03416877262E117A00CB060B /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		03991968242FF9720085BF2F /* TicTacToe-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TicTacToe-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0399196B242FF9720085BF2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0399196D242FF9720085BF2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 				0399196B242FF9720085BF2F /* AppDelegate.swift */,
 				0399196D242FF9720085BF2F /* SceneDelegate.swift */,
 				0399196F242FF9720085BF2F /* BoardView.swift */,
+				03416877262E117A00CB060B /* BoardViewController.swift */,
+				03416874262E113E00CB060B /* TicTacToeGameViewModel.swift */,
 				03991971242FF9730085BF2F /* Assets.xcassets */,
 				03991976242FF9730085BF2F /* LaunchScreen.storyboard */,
 				03991979242FF9730085BF2F /* Info.plist */,
@@ -149,8 +155,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0399196C242FF9720085BF2F /* AppDelegate.swift in Sources */,
+				03416875262E113E00CB060B /* TicTacToeGameViewModel.swift in Sources */,
 				0399196E242FF9720085BF2F /* SceneDelegate.swift in Sources */,
 				03991970242FF9720085BF2F /* BoardView.swift in Sources */,
+				03416878262E117A00CB060B /* BoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +300,8 @@
 				DEVELOPMENT_TEAM = L4WMJSL77G;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "TicTacToe-SwiftUI/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,6 +324,8 @@
 				DEVELOPMENT_TEAM = L4WMJSL77G;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "TicTacToe-SwiftUI/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

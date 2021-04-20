@@ -20,7 +20,7 @@ final class ViewModel: ObservableObject {
 
     emojiIndexSubject
       .map { index in
-        Self.makeEmojiPublisher(interval: 10.0/Double(Emojis.all[index].count), emojis: Emojis.all[index])
+        Self.makeEmojiPublisher(interval: 10.0/TimeInterval(Emojis.all[index].count), emojis: Emojis.all[index])
       }
       .switchToLatest()
       .assign(to: \.emoji, on: self)
@@ -48,10 +48,10 @@ final class ViewModel: ObservableObject {
     .autoconnect()
     .map { _ in 1 }
     .scan (0, +)
+    .map { $0 % emojis.count }
     .prepend(0)
     .map { index in
-      let wrappedIndex = index % emojis.count
-      return String(emojis[emojis.index(emojis.startIndex, offsetBy: wrappedIndex)])
+      String(emojis[emojis.index(emojis.startIndex, offsetBy: index)])
     }
     .eraseToAnyPublisher()
   }
@@ -65,7 +65,7 @@ struct ContentView: View {
       Stepper(
         onIncrement: {self.viewModel.increment()},
         onDecrement: {self.viewModel.decrement()},
-        label: { EmptyView()}
+        label: { EmptyView() }
       )
       .fixedSize()
       Text(self.viewModel.emoji)
