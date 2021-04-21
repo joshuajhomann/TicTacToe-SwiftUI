@@ -10,7 +10,7 @@ import SwiftUI
 import Combine
 
 struct BoardView: View {
-  @ObservedObject private var viewModel: TicTacToeGameViewModel = .init()
+  @StateObject private var viewModel: TicTacToeGameViewModel = .init()
   var body: some View {
     let board = viewModel.state.board
     let title = viewModel.state.title
@@ -21,14 +21,14 @@ struct BoardView: View {
           HStack {
             ForEach (board[y].indices) { x in
               GeometryReader { geometry in
-                Button(action: { self.viewModel.tap(x: x, y: y) }) {
+                Button(action: { viewModel.tap(x: x, y: y) }) {
                   Color(#colorLiteral(red: 0.9642283818, green: 0.963666524, blue: 0.9630511558, alpha: 1))
                   .cornerRadius(geometry.size.width * 0.24)
                 }
                 .overlay(
                   Text(board[x][y].map({"\($0.rawValue)"}) ?? "")
                   .font(.system(size: geometry.size.height * 0.95))
-                  .foregroundColor(self.color(x: x, y: y))
+                  .foregroundColor(color(x: x, y: y))
                 )
               }
             }
@@ -37,7 +37,7 @@ struct BoardView: View {
       }
       .aspectRatio(1.0, contentMode: .fit)
       .padding()
-      Button(action: { self.viewModel.reset() }) {
+      Button(action: { viewModel.reset() }) {
         Text("Reset")
       }
     }
